@@ -6,7 +6,7 @@ export const ListOfCategories = () => {
         <ul>
             {
                 // eslint-disable-next-line react/jsx-key
-                [1, 2].map(category => <li> <Category/> </li>)
+                [1, 2, 3, 4].map(category => <li key= {category}> <Category/> </li>)
             }
         </ul>
   )
