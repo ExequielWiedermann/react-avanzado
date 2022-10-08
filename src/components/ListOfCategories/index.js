@@ -13,6 +13,8 @@ export const ListOfCategories = () => {
         setCategories(response)
       })
   }, [])
+  // []) => esto es lo que hace es que se ejecute una sola
+  // vez y no infinito
 
   return (
     <List>
