@@ -20,6 +20,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
+            plugins: [
+              '@babel/plugin-syntax-dynamic-import'
+            ],
             presents: [
               '@babel/present-env',
               '@babel/present-react'
