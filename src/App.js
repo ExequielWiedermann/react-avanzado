@@ -12,15 +12,8 @@ export const App = () => {
   return (
     <div>
       <GlobalStyle />
-      <Logo />
-      {
-        detailId
-          ? <PhotoCardWithQuery id={detailId} />
-          : <Fragment>
-            <ListOfCategories />
-            <ListOfPhotoCards categoryId={1} />
-          </Fragment>
-      }
-    </div>
+      <Logo/>
+        {
+          detailId ? <PhotoCardWithQuery id={detailId}/> : <Fragment><ListOfCategories/><ListOfPhotoCards categoryId={1}/></Fragment>}</div>
   )
 }
