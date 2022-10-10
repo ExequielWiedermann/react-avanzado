@@ -17,14 +17,18 @@ query getSinglePhoto($id:ID!) {
 }
 `
 
+const renderProp = ({ loading, error, data }) => {
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error!</p>
+  const { photo = {} } = data
+  return <PhotoCard {...photo} />
+}
+
 // eslint-disable-next-line react/prop-types
 export const PhotoCardWithQuery = ({ id }) => (
   <Query query={GET_SINGLE_PHOTO} variables={{ id }}>
     {
-      ({ loading, error, data }) => {
-        const { photo = {} } = data
-        return <PhotoCard {...photo} />
-      }
+      renderProp
     }
   </Query>
 )
