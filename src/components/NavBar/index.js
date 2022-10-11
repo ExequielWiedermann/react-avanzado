@@ -1,12 +1,12 @@
 import React from 'react'
-import { Nav } from './styles'
+import { Link, Nav } from './styles'
 
 export const NavBar = () => {
     return (
-        <nav>
-            <button>Home</button>
-            <button>Favs</button>
-            <button>User</button>
-        </nav>
+        <Nav>
+            <Link>Home</Link>
+            <Link>Favs</Link>
+            <Link>User</Link>
+        </Nav>
     )
 }
