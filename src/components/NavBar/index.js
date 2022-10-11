@@ -4,9 +4,9 @@ import { Link, Nav } from './styles'
 export const NavBar = () => {
     return (
         <Nav>
-            <Link>Home</Link>
-            <Link>Favs</Link>
-            <Link>User</Link>
+            <Link to='/'>Home</Link>
+            <Link to='/favs'>Favs</Link>
+            <Link to='/user'>User</Link>
         </Nav>
     )
 }
