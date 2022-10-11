@@ -1,16 +1,14 @@
-// webpack.config.js
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   output: {
-    filename: 'app.bundle.js'
+    filename: 'app.bundle.js',
+    publicPath: '/'
   },
   plugins: [
-    new HtmlWebpackPlugin(
-      {
-        template: 'src/index.html'
-      }
-    )
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
   ],
   module: {
     rules: [
@@ -20,15 +18,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            plugins: [
-              '@babel/plugin-syntax-dynamic-import'
-            ],
-            presents: [
-              '@babel/present-env',
-              '@babel/present-react'
-            ]
+            plugins: ['@babel/plugin-syntax-dynamic-import'],
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
-
         }
       }
     ]
