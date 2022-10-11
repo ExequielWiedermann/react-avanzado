@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link, Nav } from './styles'
+import { MdHome, MdFavoriteBorder, MdPersonOutline } from 'react-icons/md'
 
 export const NavBar = () => {
     return (
         <Nav>
-            <Link to='/'>Home</Link>
-            <Link to='/favs'>Favs</Link>
-            <Link to='/user'>User</Link>
+            <Link to='/'><MdHome /></Link>
+            <Link to='/favs'><MdFavoriteBorder /></Link>
+            <Link to='/user'><MdPersonOutline /></Link>
         </Nav>
     )
 }
