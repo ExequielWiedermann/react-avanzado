@@ -1,6 +1,7 @@
 import React from "react";
 import { Query } from "react-apollo";
 import { gql } from "apollo-boost";
+import { ListOfFavs } from '../components/ListOfFavs'
 
 const GET_FAVS = gql`
   query getFavs {
@@ -19,7 +20,7 @@ const renderProp = ({ loading, error, data }) => {
   if (error) return <p>Error!</p>;
   const { favs } = data;
 
-  return favs.map((fav) => <img key={fav.id} src={fav.src} />);
+  return <ListOfFavs favs={favs} />
 };
 
-export const FavsWithQuery = () => <Query query={GET_FAVS}>{renderProp}</Query>;
+export const FavsWithQuery = () => <Query query={GET_FAVS} fetchPolicy='network-only'>{renderProp}</Query>;
