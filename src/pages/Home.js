@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react'
-import { ListOfCategories } from '../components/ListOfCategories'
-import { ListOfPhotoCards } from '../container/ListOfPhotoCards'
+import React, { Fragment } from "react";
+import { ListOfCategories } from "../components/ListOfCategories";
+import { ListOfPhotoCards } from "../container/ListOfPhotoCards";
 
 export const Home = ({ categoryId }) => {
   return (
@@ -8,5 +8,5 @@ export const Home = ({ categoryId }) => {
       <ListOfCategories />
       <ListOfPhotoCards categoryId={categoryId} />
     </Fragment>
-  )
-}
+  );
+};
