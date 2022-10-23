@@ -12,7 +12,6 @@ mutation likeAnonymousPhoto($input: LikePhoto!) {
 }
 `
 
-// eslint-disable-next-line react/prop-types
 export const ToggleLikeMutation = ({ children }) => {
   return <Mutation mutation={LIKE_PHOTO}>
     {children}
