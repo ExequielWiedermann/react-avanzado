@@ -1,5 +1,3 @@
-import React from 'react'
+import React from "react";
 
-export const NotFound = () => (
-  <h1>Esta página no existe! :(</h1>
-)
+export const NotFound = () => <h1>Esta página no existe! :(</h1>;
