@@ -20,9 +20,9 @@ export const Grid = styled.div`
   padding-top: 32px;
 `;
 
-export const Imagen = styled.img`
+export const Image = styled.img`
   object-fit: cover;
-  width: 100%;
   height: 100%;
+  width: 100%;
   position: absolute;
 `;
